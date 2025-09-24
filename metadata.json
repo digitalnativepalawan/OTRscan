@@ -1,0 +1,5 @@
+{
+  "name": "Receipt Capture & Extract",
+  "description": "An intelligent receipt scanner that uses AI to extract key information from uploaded receipt photos. Users can review and edit the extracted data before exporting it.",
+  "requestFramePermissions": []
+}
