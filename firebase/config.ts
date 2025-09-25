@@ -1,5 +1,7 @@
-import { initializeApp } from "firebase/app";
-import { getStorage } from "firebase/storage";
+// FIX: Updated to Firebase v8 syntax to resolve module export error.
+// The project likely uses an older version of the Firebase SDK.
+import firebase from "firebase/app";
+import "firebase/storage";
 
 // IMPORTANT: Replace with your app's Firebase project configuration
 // You can get this from the Firebase console for your project.
@@ -13,7 +15,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const app = firebase.initializeApp(firebaseConfig);
 
 // Initialize Cloud Storage and get a reference to the service
-export const storage = getStorage(app);
+export const storage = firebase.storage();
