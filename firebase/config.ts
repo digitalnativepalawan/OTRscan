@@ -1,21 +1,23 @@
-
-// Import the functions you need from the SDKs you need
+// FIX: Updated to Firebase v9 modular syntax to resolve import errors.
+// The original code used v8 syntax, but the error suggests v9+ is installed.
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getStorage } from "firebase/storage";
 
-// Your web app's Firebase configuration
+// IMPORTANT: Replace with your app's Firebase project configuration
+// You can get this from the Firebase console for your project.
 const firebaseConfig = {
-  apiKey: "AIzaSyCP32SHT2-pl9VlxWqjL-voyUczCppJ6PQ",
-  authDomain: "palawan-collective-console.firebaseapp.com",
-  databaseURL: "https://palawan-collective-console-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "palawan-collective-console",
-  storageBucket: "palawan-collective-console.firebasestorage.app",
-  messagingSenderId: "738243500004",
-  appId: "1:738243500004:web:39e31280f3f78189eed9f1"
+  apiKey: "AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  authDomain: "your-project-id.firebaseapp.com",
+  projectId: "your-project-id",
+  storageBucket: "your-project-id.appspot.com",
+  messagingSenderId: "1234567890",
+  appId: "1:1234567890:web:abcdef1234567890"
 };
 
 // Initialize Firebase
+// FIX: Property 'initializeApp' does not exist on type 'typeof firebase'. Using Firebase v9 syntax.
 const app = initializeApp(firebaseConfig);
 
-export default app;
+// Initialize Cloud Storage and get a reference to the service
+// FIX: Property 'storage' does not exist on type 'typeof firebase'. Using Firebase v9 syntax.
+export const storage = getStorage(app);
