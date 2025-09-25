@@ -1,21 +1,21 @@
-// FIX: Updated to Firebase v8 syntax to resolve module export error.
-// The project likely uses an older version of the Firebase SDK.
-import firebase from "firebase/app";
-import "firebase/storage";
 
-// IMPORTANT: Replace with your app's Firebase project configuration
-// You can get this from the Firebase console for your project.
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-  authDomain: "your-project-id.firebaseapp.com",
-  projectId: "your-project-id",
-  storageBucket: "your-project-id.appspot.com",
-  messagingSenderId: "1234567890",
-  appId: "1:1234567890:web:abcdef1234567890"
+  apiKey: "AIzaSyCP32SHT2-pl9VlxWqjL-voyUczCppJ6PQ",
+  authDomain: "palawan-collective-console.firebaseapp.com",
+  databaseURL: "https://palawan-collective-console-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "palawan-collective-console",
+  storageBucket: "palawan-collective-console.firebasestorage.app",
+  messagingSenderId: "738243500004",
+  appId: "1:738243500004:web:39e31280f3f78189eed9f1"
 };
 
 // Initialize Firebase
-const app = firebase.initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
-// Initialize Cloud Storage and get a reference to the service
-export const storage = firebase.storage();
+export default app;
